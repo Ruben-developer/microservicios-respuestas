@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.formacionbdi.microservicios.commons.alumnos.models.entity.Alumno;
@@ -25,7 +25,7 @@ public class Respuesta {
     @ManyToOne(fetch = FetchType.LAZY)
     private Alumno alumnos;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     private Pregunta pregunta;
 
     public Long getId() {
